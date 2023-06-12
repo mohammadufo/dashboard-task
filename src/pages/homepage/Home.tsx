@@ -2,6 +2,7 @@ import { styled } from 'styled-components'
 import Total from './components/Total'
 import CenterBox from './components/CenterBox'
 import Latest from './components/Latest'
+import Reports from './components/Reports'
 
 const Container = styled.div`
   display: flex;
@@ -59,7 +60,9 @@ const Home = () => {
         <TopChild>
           <Total />
         </TopChild>
-        <TopChild></TopChild>
+        <TopChild>
+          <Reports />
+        </TopChild>
       </Top>
       <Center>
         <CenterChild>

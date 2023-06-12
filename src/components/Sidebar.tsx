@@ -10,6 +10,10 @@ import SettingIcon from '../assets/icons/settings.png'
 import HelpIcon from '../assets/icons/help.png'
 import BackIcon from '../assets/icons/back.png'
 
+interface Prop {
+  active?: string
+}
+
 const Container = styled.div`
   width: 256px;
   height: 100vh;
@@ -19,6 +23,7 @@ const Container = styled.div`
   justify-content: space-around;
   background-color: #fff;
   border-radius: 0px 26px 26px 0px;
+  overflow-y: scroll;
 `
 
 const Top = styled.div`
@@ -75,7 +80,7 @@ const List = styled.ul`
   gap: 22px;
 `
 
-const ListItem = styled.li`
+const ListItem = styled.li<Prop>`
   display: flex;
   justify-content: flex-start;
   align-items: center;
