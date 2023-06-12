@@ -15,8 +15,8 @@ const Right = styled.div`
   justify-content: center;
 `
 const Left = styled.div`
-  background-color: orangered;
-  height: 100%;
+  height: 100vh;
+  overflow-y: scroll;
   flex: 4;
 `
 

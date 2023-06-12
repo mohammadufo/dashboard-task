@@ -5,4 +5,5 @@ export const lightThem = {
   mainText: '#000000',
   secondaryText: '#A1A0BD',
   disabledText: '#CCCBD8',
+  successText: '#4FD18B',
 }

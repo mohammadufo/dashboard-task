@@ -26,7 +26,13 @@ const Top = styled.div`
   align-items: center;
   padding: 25px;
 `
-const Main = styled.div``
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 46px;
+`
 const Footer = styled.div`
   display: flex;
   justify-content: center;
@@ -35,7 +41,13 @@ const Footer = styled.div`
   gap: 16px;
   font-weight: 800;
   font-size: 17px;
+  cursor: pointer;
   color: ${({ theme }) => theme.disabledText};
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `
 const Logo = styled.div`
   display: flex;
@@ -75,7 +87,23 @@ const ListItem = styled.li`
     active === 'yes' ? theme.primary : theme.secondaryText};
   background-color: ${({ theme, active }) => active === 'yes' && theme.bgSoft};
   border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.bgSoft};
+  }
 `
+
+const FooterList = styled.ul`
+  padding-top: 22px;
+  border-top: 1px solid #e0dff0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+`
+
 const Span = styled.span``
 
 const Sidebar = () => {
@@ -111,6 +139,8 @@ const Sidebar = () => {
             <Image src={TransactionIcon} />
             <Span>Transactions</Span>
           </ListItem>
+        </List>
+        <FooterList>
           <ListItem>
             <Image src={SettingIcon} />
             <Span>Settings</Span>
@@ -119,7 +149,7 @@ const Sidebar = () => {
             <Image src={HelpIcon} />
             <Span>Help</Span>
           </ListItem>
-        </List>
+        </FooterList>
       </Main>
       <Footer>
         <Image src={BackIcon} />
