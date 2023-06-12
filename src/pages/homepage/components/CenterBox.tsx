@@ -55,6 +55,21 @@ const Small = styled.span`
   color: ${({ theme }) => theme.secondary};
 `
 
+const Button = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 12px;
+  gap: 4px;
+  cursor: pointer;
+  color: ${({ theme }) => theme.primary};
+  background-color: #fff;
+  border: 1px solid ${({ theme }) => theme.primary};
+  border-radius: 46.0571px;
+  text-transform: uppercase;
+`
+
 const CenterBox = (props: Prop) => {
   const { title, isUp, hasBtn } = props
 
@@ -64,10 +79,14 @@ const CenterBox = (props: Prop) => {
       <Price>
         $ 18532<Small>.52</Small>
       </Price>
-      <Action ascending={isUp ? 'yes' : 'no'}>
-        <BsGraphUpArrow />
-        <Span>+ 11%</Span>
-      </Action>
+      {!hasBtn ? (
+        <Action ascending={isUp ? 'yes' : 'no'}>
+          <BsGraphUpArrow />
+          <Span>+ 11%</Span>
+        </Action>
+      ) : (
+        <Button>View Details</Button>
+      )}
     </Container>
   )
 }

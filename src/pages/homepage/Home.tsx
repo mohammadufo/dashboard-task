@@ -3,6 +3,7 @@ import Total from './components/Total'
 import CenterBox from './components/CenterBox'
 import Latest from './components/Latest'
 import Reports from './components/Reports'
+import Spend from './components/Spend'
 
 const Container = styled.div`
   display: flex;
@@ -82,7 +83,9 @@ const Home = () => {
         <BottomChild>
           <Latest />
         </BottomChild>
-        <BottomChild></BottomChild>
+        <BottomChild>
+          <Spend />
+        </BottomChild>
       </Bottom>
     </Container>
   )
