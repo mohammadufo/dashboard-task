@@ -6,4 +6,7 @@ export const lightThem = {
   secondaryText: '#A1A0BD',
   disabledText: '#CCCBD8',
   successText: '#4FD18B',
+  bgSuccess: '#DCF5E8',
+  bgDanger: '#F5DCDC',
+  dangerText: '#D14F4F',
 }

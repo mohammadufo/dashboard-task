@@ -61,7 +61,7 @@ const Span = styled.span`
   font-weight: 800;
   font-size: 19px;
   line-height: 23px;
-  color: ${({ theme }) => theme.disabledText};
+  color: ${({ theme }) => theme.secondary};
 `
 
 const Desc = styled.p`
@@ -109,6 +109,7 @@ const Button = styled.button<Props>`
   border: 1px solid
     ${({ theme, outlined }) => (outlined === 'yes' ? theme.primary : 'none')};
   border-radius: 46.0571px;
+  text-transform: uppercase;
 `
 
 const Total = () => {

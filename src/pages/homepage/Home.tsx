@@ -1,5 +1,7 @@
 import { styled } from 'styled-components'
 import Total from './components/Total'
+import CenterBox from './components/CenterBox'
+import Latest from './components/Latest'
 
 const Container = styled.div`
   display: flex;
@@ -39,14 +41,14 @@ const CenterChild = styled.div`
   gap: 10px;
   width: 258.75px;
   height: 143.07px;
-  background-color: teal;
   border-radius: 11px;
+  background-color: #fff;
 `
 
 const BottomChild = styled.div`
   width: 547.46px;
   height: 447px;
-  background-color: aqua;
+  background-color: #fff;
   border-radius: 16px;
 `
 
@@ -60,13 +62,23 @@ const Home = () => {
         <TopChild></TopChild>
       </Top>
       <Center>
-        <CenterChild></CenterChild>
-        <CenterChild></CenterChild>
-        <CenterChild></CenterChild>
-        <CenterChild></CenterChild>
+        <CenterChild>
+          <CenterBox title="Total Income" isUp={true} />
+        </CenterChild>
+        <CenterChild>
+          <CenterBox title="Total Saves" isUp={false} />
+        </CenterChild>
+        <CenterChild>
+          <CenterBox title="Total Expense" isUp={true} />
+        </CenterChild>
+        <CenterChild>
+          <CenterBox title="Upcoming" hasBtn={true} />
+        </CenterChild>
       </Center>
       <Bottom>
-        <BottomChild></BottomChild>
+        <BottomChild>
+          <Latest />
+        </BottomChild>
         <BottomChild></BottomChild>
       </Bottom>
     </Container>
